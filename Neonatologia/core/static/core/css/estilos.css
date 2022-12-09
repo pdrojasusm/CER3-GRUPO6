@@ -3,25 +3,23 @@
     padding: 0;
 }
 
-#nav{
-    height: 15vw;
-    border-bottom: solid;
-    border-color: #000;
-    border-width: 0.1vw;
+#header{
+    height: 25vh;
 }
 
 #logo{
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     background-size: contain;
 }
 
 #vacio{
-    height: 8vw;
-    border-bottom: solid;
-    border-color: #000;
-    border-width: 0.1vw;
+    height: 11vh;
+}
+
+.bg-nvbarra{
+    background-color:  #1a579c;
 }
 
 nav ul{
@@ -31,18 +29,95 @@ nav ul{
 nav ul li{
     float: left;
     list-style: none;
+    margin-right: 5vw;
 }
 
 nav ul li a{
     display: block;
     padding: 8px;
     margin-left: 5px;
-    margin-right: 5px;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
 }
 
 #busq{
+    margin: 10px;
     margin-left: 2vw;
+}
+
+#info{
+    height: 80vh;
+    margin-top: 5vh;
+}
+
+#info .row{
+    height: 80vh;
+}
+
+h1{
+    text-align: center;
+}
+
+#info p{
+    font-size: small;
+}
+
+#img2 {
+    height: 30vh;
+    margin: 1vw;
+    background-image: url(../img/hospital.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#caso #oj {
+    margin-top: 10vh;
+    color: #1a579c;
+    font-size: 40px;
+}
+
+#caso #c_login {
+    width: 30vw;
+    height: 40vh;
+    font-style: italic;
+    align-items: center;
+    margin-left: 28vw;
+}
+
+#caso #c_login .btn{
+    float: right;
+}
+
+#btnmatrona{
+    width: 18vw;
+    height: 10vh;
+    padding: 8px;
+    margin: 10px;
+    border-color: #1a579c;
+}
+
+#exampleModal label{
+	border: 2px solid silver;
+	display: inline-block;
+	padding: 10px;
+	position: relative;
+}
+
+#exampleModal span{
+	color: silver;
+	display: inline-block;
+	left: 2px;
+	padding: 5px;
+	position: absolute;
+	transition: 0.25s;
+	top: 9px;
+	width: auto;
+}
+
+#exampleModal span.reubicar{
+	color: blue;
+	font-size: 10px;
+	top: -12px;
 }

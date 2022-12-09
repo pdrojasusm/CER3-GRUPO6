@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}Hospital | Inicio de Sesión Matrona{% endblock %}
+
+{% block content %}
+    <div id="caso" class="container">
+        <div id="oj" class="row justify-content-center">Intranet Matronas</div>
+        <div id="c_login" class="row">
+            <form action="" method="POST">
+                <div class="mb-3 form-group">
+                    <input type="rut" class="form-control" id="RutMatrona" placeholder="12.345.678-9">
+                </div>
+                <div class="mb-3 form-group">
+                    <input type="password" class="form-control" id="ContraseñaMatrona" placeholder="Ingresar Contraseña (8 digitos)">
+                </div>
+                <div id="olvidar" class="mb-3">
+                    <a href="#">¿Olvidaste la contraseña?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
