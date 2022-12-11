@@ -3,83 +3,204 @@
 {% block titulo %}Hospital | Sesión Matrona{% endblock %}
 
 {% block content %}
-    <div class="container text-center">
-        <div id="imgperfile"></div>
-        <div class="row bt-5">
-            <p>Bienvenido/a:</p>
-            <h1>Nombre Matrona</h1>
-        </div>
-        <div class="row bt-5 justify-content-between">
-            <div class="col-6">
-                <button id="btnmatrona" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrar Datos Paciente</button>
-
-                <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Paciente</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form class="row g-3">
-                                <div class="col-md-6">
-                                  <input type="email" class="form-control" id="inputEmail4">
-                                  
-                                </div>
-                                <div class="col-md-6">
-                                  <label for="inputPassword4" class="form-label">Password</label>
-                                  <input type="password" class="form-control" id="inputPassword4">
-                                </div>
-                                <div class="col-12">
-                                  <label for="inputAddress" class="form-label">Address</label>
-                                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                </div>
-                                <div class="col-12">
-                                  <label for="inputAddress2" class="form-label">Address 2</label>
-                                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                                </div>
-                                <div class="col-md-6">
-                                  <label for="inputCity" class="form-label">City</label>
-                                  <input type="text" class="form-control" id="inputCity">
-                                </div>
-                                <div class="col-md-4">
-                                  <label for="inputState" class="form-label">State</label>
-                                  <select id="inputState" class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
-                                  </select>
-                                </div>
-                                <div class="col-md-2">
-                                  <label for="inputZip" class="form-label">Zip</label>
-                                  <input type="text" class="form-control" id="inputZip">
-                                </div>
-                                <div class="col-12">
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">
-                                      Check me out
-                                    </label>
-                                  </div>
-                                </div>
-                                <div class="col-12">
-                                  <button type="submit" class="btn btn-primary">Sign in</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-primary">Registrar</button>
-                        </div>
-                      </div>
+  <div id="manejo" class="container text-center">
+    <div class="row bt-5">
+      <p>Bienvenido/a:</p>
+      <h1>Nombre Matrona</h1>
+    </div>
+    <div class="row bt-5">
+      <div class="col-6">
+        <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrar Datos Paciente</button>
+        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Paciente</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Primer Nombre</label>
                     </div>
                   </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid">
+                        <label for="floatingInputGrid">Segundo Nombre</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                        <option value="1">Femenino</option>
+                        <option value="2">Masculino</option>
+                      </select>
+                      <label for="floatingSelectGrid">Género</label>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="date" class="form-control"><span class="input-group-addon"></span>
+                      <label for="floatingSelectGrid">Fecha de Nacimiento</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">RUT de la Madre</label>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Correo Electrónico Padres o Tutor</label>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="time" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Hora de Nacimiento</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Motivo de Ingreso</label>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Peso</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <textarea class="form-control" id="floatingInputGrid"></textarea>
+                      <label for="floatingInputGrid">Primeras Observaciones</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Registrar</button>
+              </div>
             </div>
-            <div class="col-6"><button id="btnmatrona">Actualizar Datos Paciente</button></div>
+          </div>
         </div>
-        <div class="row bt-5 justify-content-center">
-            <div class="col-12"><button id="btnmatrona">Seguimiento Paciente</button></div>
+      </div>
+      <div class="col-6">
+        <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal2">Actualizar Datos Paciente</button>
+        <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Registro Diario de Paciente</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Código de Verificación</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Primer Nombre</label>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Segundo Nombre</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                        <option value="1">Femenino</option>
+                        <option value="2">Masculino</option>
+                      </select>
+                      <label for="floatingSelectGrid">Género</label>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="date" class="form-control"><span class="input-group-addon"></span>
+                      <label for="floatingSelectGrid">Fecha de Registro</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">RUT de la Madre</label>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="time" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Hora de Registro</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Motivo de Ingreso</label>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputGrid">
+                      <label for="floatingInputGrid">Peso</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md">
+                    <div class="form-floating">
+                      <textarea class="form-control" id="floatingInputGrid"></textarea>
+                      <label for="floatingInputGrid">Observaciones</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Ingresar Registro</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row bt-5">
-            <p><a href="#">Cerrar Sesión</a></p>
-        </div>
+      </div>
     </div>
+    <div class="row bt-5 justify-content-center">
+      <div class="col-12">
+        <button type="button" class="btn btn-outline-primary btn-lg" >Seguimiento Paciente</button>
+      </div>
+    </div>
+    <div class="row bt-5">
+      <p><a href="{% url 'logout' %}">Cerrar Sesión</a></p>
+    </div>
+  </div>
 {% endblock %}

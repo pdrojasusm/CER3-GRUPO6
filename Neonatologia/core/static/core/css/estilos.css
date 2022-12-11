@@ -3,19 +3,11 @@
     padding: 0;
 }
 
-#header{
-    height: 25vh;
-}
-
 #logo{
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-}
-
-#vacio{
-    height: 11vh;
 }
 
 .bg-nvbarra{
@@ -46,10 +38,6 @@ nav ul li a{
     margin-left: 2vw;
 }
 
-#info{
-    height: 80vh;
-    margin-top: 5vh;
-}
 
 #info .row{
     height: 80vh;
@@ -90,34 +78,6 @@ h1{
     float: right;
 }
 
-#btnmatrona{
-    width: 18vw;
-    height: 10vh;
-    padding: 8px;
-    margin: 10px;
-    border-color: #1a579c;
-}
-
-#exampleModal label{
-	border: 2px solid silver;
-	display: inline-block;
-	padding: 10px;
-	position: relative;
-}
-
-#exampleModal span{
-	color: silver;
-	display: inline-block;
-	left: 2px;
-	padding: 5px;
-	position: absolute;
-	transition: 0.25s;
-	top: 9px;
-	width: auto;
-}
-
-#exampleModal span.reubicar{
-	color: blue;
-	font-size: 10px;
-	top: -12px;
+#manejo .row {
+    margin: 20px;
 }
