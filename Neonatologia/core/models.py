@@ -4,6 +4,17 @@ from django.db import models
 #superadministrador contraseña = admin1234
 
 # Create your models here.
+class UserMatrona(models.Model):
+    rut = models.CharField(max_length=12)
+    nombre = models.CharField(max_length=15)
+    apellido = models.CharField(max_length=20)
+    email = models.EmailField()
+    password = models.CharField(max_length=8)
+
+    def __str__(self) -> str:
+        return "%s %s" % (self.nombre, self.apellido)
+
+
 class recien_nacido(models.Model):
     id_recien_nacido = models.IntegerField()
     fecha_de_nacimiento = models.DateField()
