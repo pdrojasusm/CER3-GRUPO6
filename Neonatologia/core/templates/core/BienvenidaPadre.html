@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'core/base.html' %}
+
+{% block titulo %}Hospital | Bienvenida Padre{% endblock %}
+
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos Padres</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <LINK REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
 </head>
@@ -14,31 +16,18 @@
 <br>
 <nav class="navbar navbar-expand-lg bg-light" >
   <div class="container-fluid">
-    <img src="D:\Benja\Desktop\HTML HITO2\Nueva carpeta\imagenes\Logo_Gobierno_de_Chile_2010-2014.svg.png"width="100" height="100"  class="alineadoTextoImagenAbajo"/>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#" >Inicio</a>
-        <a class="nav-link" href="#">Conózcanos</a>
-        <a class="nav-link" href="#">Intranet Padres</a>
-        <a class="nav-link disabled">Intranet Matrona</a>
-      </div>
-    </div>
-  </div>
   <nav class="navbar bg-light">
     <div class="container-fluid">
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"> <img src="D:\Benja\Desktop\HTML HITO2\Nueva carpeta\imagenes\d88720d43a844a7c61cb2917a128e7ad.jpg"width="25" height="25"  class="alineadoTextoImagenAbajo"/></button>
-      </form>
     </div>
   </nav>
 </nav>
 <br>
 <br>
-<h3 border-with: 1>Bienvenido/a</h3>
+<h3>Bienvenido/a</h3>
 <h1>Inés Galvez</h1>
 <div class="container text-center">
 
@@ -47,7 +36,11 @@
 
 
 
-<img src="D:\Benja\Desktop\HTML HITO2\Nueva carpeta\imagenes\Captura.PNG"width="80%" height="80%"  class="alineadoTextoImagenAbajo"/>
+<img src="D:\Benja\Desktop\HTML HITO2\Nueva carpeta\imagenes\Captura.PNG"width="75%" height="75%"  class="alineadoTextoImagenAbajo"/>
 
 </body>
 </html>
+<div class="row bt-5">
+      <p><a href="{% url 'logout' %}">Cerrar Sesión</a></p>
+    </div>
+{% endblock %}
