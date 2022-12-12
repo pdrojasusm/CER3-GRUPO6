@@ -3,21 +3,236 @@
 {% block titulo %}Hospital | Bienvenida Padre{% endblock %}
 
 {% block content %}
+<div id="manejo" class="container text-center">
+  <div class="row bt-5">
+    <p>Bienvenido/a:</p>
+    <h1>Inés Galvez</h1>
+  </div>
+  <div class="row bt-5">
+    <div class="col-6">
+      <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Datos Paciente</button>
+      <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Información Paciente</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                    <h5> Información Paciente</h5>
+                    <img src="D:\Benja\Desktop\HTML HITO2\Nueva carpeta\imagenes\persona.png"width="80" height="80"  class="alineadoTextoImagenAbajo"/>
+                    
+                    <h5> Nombre:  Javier Antonio</h5> 
+                    <h5> Fecha De Nacimiento: 30/06/2000</h5> 
+                    <h5> Hora De Nacimiento: 7:54 AM</h5> 
+                    <h5> Peso: 3.24 KG</h5> 
+                    <h5> Género: Masculino</h5> 
+                    <h5> Matrona A Cargo: Francisca Lillo</h5> 
+                    <h3>Informe Hospitalización</h3>
+                    <h5> Fecha Ingreso:01/07/2000</h5> 
+                    <h5> Motivo Ingreso:HG Intraventricular</h5> 
+                    <h5> Nº de Cama: C072</h5> 
+                    </body>
+                    </html>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
 
-<h3>Bienvenido/a</h3>
-<h1>Inés Galvez</h1>
-<div class="container text-center">
-
-<button type="button" class="btn btn-secondary btn-lg">Datos Paciente</button>
-<button type="button" class="btn btn-secondary btn-lg">Seguimiento Paciente</button>
-
-
-
-<img src="D:\Benja\Desktop\HTML HITO2\Nueva carpeta\imagenes\Captura.PNG"width="75%" height="75%"  class="alineadoTextoImagenAbajo"/>
-
-</body>
-</html>
-<div class="row bt-5">
-      <p><a href="{% url 'logout' %}">Cerrar Sesión</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Registrar</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="col-6">
+      <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal2">Seguimiento Paciente</button>
+      <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Registro Diario de Paciente</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           
+            </div>
+            <table class="tabla2">
+              <thead>
+                <caption>Diciembre 2022</caption>
+                <tr>
+                  <th>Lu</th>
+                  <th>Ma</th>
+                  <th>Mie</th>
+                  <th>Ju</th>
+                  <th>Vi</th>
+                  <th>Sá</th>
+                  <th>Do</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>29</td>
+                  <td>30</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+             
+            <div class="modal-body">
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row bt-5">
+    <p><a href="{% url 'logout' %}">Cerrar Sesión</a></p>
+  </div>
+</div>
 {% endblock %}
