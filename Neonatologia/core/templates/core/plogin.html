@@ -3,21 +3,22 @@
 {% block titulo %}Hospital | Intranet Tutores Y/O Padres{% endblock %}
 
 {% block content %}
+
     <div id="caso" class="container">
-        <div id="oj" class="row justify-content-center">Intranet Padres y/o Tutores</div>
+        <div id="oj" class="row justify-content-center">Intranet Tutores Y/O Padres</div>
         <div id="c_login" class="row">
             <form method="POST">
                 {% csrf_token %}
                 <div class="mb-3 form-group">
-                    <input type="text" class="form-control" id="UsernamePadres" placeholder="Username">
+                    <input type="text" class="form-control" id="UsernameMatrona" placeholder="Username">
                 </div>
                 <div class="mb-3 form-group">
-                    <input type="password" class="form-control" id="ContraseñaPadres" placeholder="Ingresar Contraseña (8 digitos)">
+                    <input type="password" class="form-control" id="ContraseñaMatrona" placeholder="Ingresar Contraseña (8 digitos)">
                 </div>
                 <div id="olvidar" class="mb-3">
                     <a href="#">¿Olvidaste la contraseña?</a>
                 </div>
-                <button type="submit" class="btn btn-primary">Ingresar</button>
+                <button type="submit" class="btn btn-primary"><a href="{% url 'BienvenidaPadre' %}" class="nav-link text-light">Ingresar</a></button>
             </form>
         </div>
     </div>
