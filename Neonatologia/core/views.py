@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from .models import UserMatrona
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 # Create your views here.
 def inicio(request):
@@ -10,24 +11,35 @@ def inicio(request):
 def conozcanos(request):
     return render(request,'core/conozcanos.html',{})
 
-def padreslogin(request):
-    return render(request,'core/padreslogin.html',{})
-
 def lmatrona(request):
-    rut_usuario = request.GET.get('RutMatrona')
-    contrasena = request.GET.get('ContrasenaMatrona')
-    matrona = UserMatrona.objects.all()
-    if UserMatrona.objects.filter(rut = rut_usuario):
-        if UserMatrona.objects.filter(password = contrasena):
-            matrona = UserMatrona.objects.filter(rut = rut_usuario)
-            return matrona(request, matrona)
-    return render(request,'core/lmatrona.html')
+    if request.method == 'POST':
+        form = AuthenticationForm(request,data=request.POST)
+        if form.is_valid():
+            usuario = form.cleaned_data.get('username')
+            contrasena = form.cleaned_data.get('password')
+            user = authenticate(username=usuario,password=contrasena)
+            if user is not None:
+                login(request,user)
+                messages.info(request,f'estas logeado como {usuario}')
+                return redirect("core:matrona")
+            else:
+                messages.error(request,"usuario o contraseña equivocados")
+        else:
+            messages.error(request,"usuario o contraseña equivocados")
 
-def logout_view(request):
- logout(request)
- return redirect('/')
+    form = AuthenticationForm()
+    return render(request,'core/mlogin.html',{'form':form})
 
-@login_required
-def matrona(request,matrona):
-    return render(request,'core/matrona.html',{'matrona':matrona})
+def matrona(request):
+    return render(request,'core/matrona.html',{})
 
+def logout_request(request):
+    logout(request)
+    return redirect('core:lmatrona')
+
+def padreslogin(request):
+    logout(request)
+    return render(request,'core/padreslogin.html',{})
+    
+def BienvenidaPadre(request):
+    return render(request,'core/BienvenidaPadre.html',{})
