@@ -3,7 +3,7 @@ from django.db import models
 #superadministrador user = informatica_hospital
 #superadministrador contraseña = admin1234
 
-# Create your models here.
+# Create your models here. 
 class recien_nacido(models.Model):
     id_recien_nacido = models.IntegerField()
     fecha_de_nacimiento = models.DateField()
@@ -13,6 +13,9 @@ class recien_nacido(models.Model):
     motivo_ingreso = models.CharField(max_length=50)
     rut_madre = models.CharField(max_length=10)
     primera_obs = models.TextField()
+
+    def  __str__(self):
+        return self.primera_obs
 
 class madre_padre(models.Model):
     rut_madre = models.CharField(max_length=10)

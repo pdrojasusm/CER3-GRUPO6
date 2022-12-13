@@ -3,6 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from django.contrib import messages
+from .forms import recien_nacidoForm
 
 # Create your views here.
 def inicio(request):
@@ -43,3 +44,18 @@ def padreslogin(request):
     
 def BienvenidaPadre(request):
     return render(request,'core/BienvenidaPadre.html',{})
+
+
+def recien_nacido(request):
+    data = {
+        'form':recien_nacidoForm()
+    }
+    if request.method == 'POST':
+        formulario = recien_nacidoForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"]="contacto guardado"
+        else:
+            data["form"]= formulario
+            
+    return render(request, 'core/matrona.html', data)

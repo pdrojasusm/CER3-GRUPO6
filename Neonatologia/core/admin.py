@@ -5,6 +5,7 @@ from .models import seguimiento
 # Register your models here.
 class recien_nacidoAdmin(admin.ModelAdmin):
         list_display=['__all__']
+
 admin.site.register(recien_nacido)
 admin.site.register(madre_padre)
 admin.site.register(seguimiento)
